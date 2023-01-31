@@ -2,6 +2,7 @@ import 'package:amazon_clone/pages/home/widgets/app_bar.dart';
 import 'package:amazon_clone/pages/home/widgets/books_list.dart';
 import 'package:amazon_clone/pages/home/widgets/header.dart';
 import 'package:amazon_clone/pages/home/widgets/icons_list.dart';
+import 'package:amazon_clone/pages/home/widgets/new_book.dart';
 import 'package:amazon_clone/pages/home/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,8 @@ class HomePage extends StatelessWidget {
           ...buildHeader(),
           buildSearchBar(),
           buildIconsList(),
-          BuildBookList()
+          BuildBookList(),
+          BuildnewBook()
         ],
       )),
     );

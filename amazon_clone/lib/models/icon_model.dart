@@ -26,5 +26,13 @@ class IconModel {
       icon: "assets/icons/Icon_5.png",
       title: "Audio Book",
     ),
+    IconModel(
+      icon: "assets/icons/Icon_6.png",
+      title: "Internet",
+    ),
+    IconModel(
+      icon: "assets/icons/Icon_7.png",
+      title: "Wide Access",
+    ),
   ];
 }

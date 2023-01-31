@@ -7,8 +7,9 @@ AppBar buildAppBar() => AppBar(
       elevation: 0,
       centerTitle: false,
       title: Image.asset(
-        'assets/icons/Icon_1.png',
-        height: 25,
+        'assets/images/Logo_Shop.jpg',
+        height: 100,
+        width: 100,
       ),
       actions: [
         Padding(

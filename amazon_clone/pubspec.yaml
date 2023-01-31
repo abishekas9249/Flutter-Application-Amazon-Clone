@@ -73,7 +73,10 @@ flutter:
       - assets/icons/Icon_3.png
       - assets/icons/Icon_4.png
       - assets/icons/Icon_5.png
+      - assets/icons/Icon_6.png
+      - assets/icons/Icon_7.png
       - assets/images/profile.png
+      - assets/images/Logo_Shop.jpg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

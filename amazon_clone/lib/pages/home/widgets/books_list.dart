@@ -68,16 +68,28 @@ class BuildBookList extends StatelessWidget {
                           elevation: 4,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10.0),
-                            child: Image.asset(books[index].image,
-                                height: 180, width: 120, fit: BoxFit.cover),
+                            child: Image.asset(
+                              books[index].image,
+                              height: 180,
+                              width: 120,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 120,
+                          child: Text(
+                            books[index].title,
                           ),
                         ),
                         Container(
                           width: 120,
                           child: Text(
                             books[index].subtitle,
-                            style:
-                                TextStyle(fontSize: 10, color: Colors.blueGrey),
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.blueGrey,
+                            ),
                           ),
                         )
                       ],
