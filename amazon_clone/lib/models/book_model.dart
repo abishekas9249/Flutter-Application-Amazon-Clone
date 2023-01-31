@@ -13,6 +13,22 @@ class BookModel {
     required this.favorite,
   });
 
+  static List<BookModel> newBooks = [
+    BookModel(
+      image: "assets/images/New_Book_1.jpg",
+      secondImage: "assets/images/New_Book_1.jpg",
+      title: "It Ends With Us",
+      subtitle: "-Colleen Hoover",
+      favorite: true,
+    ),
+    BookModel(
+      image: "assets/images/New_Book_2.jpg",
+      secondImage: "assets/images/New_Book_2.jpg",
+      title: "The Silent Patient",
+      subtitle: "-Alex Michaelindas",
+      favorite: true,
+    ),
+  ];
   static List<BookModel> books = [
     BookModel(
         image: "assets/images/Book_1.jpg",
