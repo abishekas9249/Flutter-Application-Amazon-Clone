@@ -17,7 +17,7 @@ AppBar buildAppBar() => AppBar(
         ),
         Container(
           child: CircleAvatar(
-            backgroundImage: AssetImage("assets/images/profile.png"),
+            backgroundImage: AssetImage("assets/images/profile.jpg"),
             radius: 22,
           ),
           padding: EdgeInsets.all(5),
