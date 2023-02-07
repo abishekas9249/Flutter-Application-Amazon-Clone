@@ -2,6 +2,8 @@ import 'package:amazon_clone/constants.dart';
 import 'package:amazon_clone/models/book_model.dart';
 import 'package:flutter/material.dart';
 
+import '../../book/book_page.dart';
+
 class BuildnewBook extends StatelessWidget {
   final List<BookModel> newBook = BookModel.newBooks;
   @override
@@ -31,7 +33,7 @@ class BuildnewBook extends StatelessWidget {
         SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: List.generate(
               newBook.length,
               (index) => Padding(
@@ -41,8 +43,18 @@ class BuildnewBook extends StatelessWidget {
                   left: index == 0 ? Constants.kPadding : 0,
                 ),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BookPage(
+                          book: newBook[index],
+                        ),
+                      ),
+                    );
+                  },
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Card(
                         shape: RoundedRectangleBorder(
@@ -59,28 +71,51 @@ class BuildnewBook extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        width: 120,
-                        child: Text(
-                          newBook[index].title,
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            newBook[index].title,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                          ),
+                          Text(
+                            newBook[index].subtitle,
+                            style: TextStyle(
+                              color: Colors.blueGrey,
+                              fontSize: 10,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ],
                       ),
-                      Container(
-                        width: 120,
-                        child: Text(
-                          newBook[index].subtitle,
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.blueGrey,
+                      TextButton(
+                        onPressed: () {},
+                        child: Text("4.8"),
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 2.0,
+                            horizontal: Constants.kPadding,
+                          ),
+                          backgroundColor: Colors.deepOrange,
+                          foregroundColor: Colors.white,
+                          minimumSize: Size(5, 5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
           ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).padding.bottom,
         )
       ],
     );
